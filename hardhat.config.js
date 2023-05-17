@@ -1,5 +1,7 @@
+require('@nomiclabs/hardhat-ethers');
 require("@nomiclabs/hardhat-etherscan");
 require('@nomiclabs/hardhat-waffle');
+require('@openzeppelin/hardhat-upgrades');
 require('dotenv').config();
 
 module.exports = {
@@ -63,12 +65,17 @@ module.exports = {
   },
   networks: {
     goerli: {
-      url: `https://eth-goerli.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`,
-      accounts: [process.env.GOERLI_PRIVATE_KEY],
+      url: `https://eth-goerli.alchemyapi.io/v2/${process.env.GOERLI_API_KEY}`,
+      accounts: [process.env.ETHERSCAN_PRIVATE_KEY],
+      gasPrice: 100000000000
+    },
+    sepolia: {
+      url: `https://eth-sepolia.g.alchemy.com/v2/${process.env.SEPOLIA_API_KEY}`,
+      accounts: [process.env.ETHERSCAN_PRIVATE_KEY],
       gasPrice: 100000000000
     }
   },
   etherscan: {
-    apiKey: "MJG93XGNRH535TA7K71BQCA3UE625U1BXW",
+    apiKey: process.env.ETHERSCAN_API_KEY,
   },
 };
