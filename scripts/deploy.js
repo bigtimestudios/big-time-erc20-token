@@ -7,8 +7,14 @@ async function main() {
   
   console.log("Account balance:", (await ethers.utils.formatEther(weiAmount)));
 
-  const Token = await ethers.getContractFactory("BigTime");
-  const token = await Token.deploy();
+  const Token = await ethers.getContractFactory("BigTimeToken");
+  const args = [
+    "Big Time",
+    "TIME",
+    `1000000000000000000`,
+    100000000000,
+  ]
+  const token = await Token.deploy(...args);
 
   console.log("Token address:", token.address);
 }

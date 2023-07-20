@@ -1,13 +1,20 @@
-# Sample Hardhat Project
+# Big Time $TIME ERC-20 Token
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This is a project for the ERC-20 token contract of Big Time (TIME).
+For more information, please visit: https://wiki.bigtime.gg/big-time-economy/economy-components/resources/usdtime-tokens.
 
-Try running some of the following tasks:
+
+Run the deployment for the token:
+
+```shell
+npx hardhat run scripts/deploy.js
+```
+
+Useful commands:
 
 ```shell
 npx hardhat help
 npx hardhat test
 REPORT_GAS=true npx hardhat test
 npx hardhat node
-npx hardhat run scripts/deploy.js
 ```

@@ -73,6 +73,11 @@ module.exports = {
       url: `https://eth-sepolia.g.alchemy.com/v2/${process.env.SEPOLIA_API_KEY}`,
       accounts: [process.env.ETHERSCAN_PRIVATE_KEY],
       gasPrice: 100000000000
+    },
+    mainnet: {
+      url: `https://eth-mainnet.g.alchemy.com/v2/${process.env.MAINNET_API_KEY}`,
+      accounts: [process.env.ETHERSCAN_PRIVATE_KEY],
+      gasPrice: 100000000000
     }
   },
   etherscan: {
