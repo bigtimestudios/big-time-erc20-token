@@ -11,8 +11,7 @@ async function main() {
   const args = [
     "Big Time",
     "TIME",
-    `1000000000000000000`,
-    100000000000,
+    5000000000,
   ]
   const token = await Token.deploy(...args);
 
