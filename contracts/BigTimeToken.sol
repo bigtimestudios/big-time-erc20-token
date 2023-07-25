@@ -7,7 +7,7 @@ contract BigTimeToken is ERC20 {
     constructor(
         string memory _name,
         string memory _symbol,
-        uint _totalSupply,
+        uint _totalSupply
     ) ERC20(_name, _symbol) {
         _mint(msg.sender, _totalSupply * 10 ** decimals());
     }
